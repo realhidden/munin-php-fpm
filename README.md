@@ -1,3 +1,5 @@
+This version [realhidden / munin-php-fpm](https://github.com/realhidden/munin-php-fpm) fixes per pool usage statistics on 'ondemand' pools.
+
 This is a revised version of [Devlopnet / munin-php-fpm](https://github.com/Devlopnet/munin-php-fpm) with the difference that processes are combined based on their pools. Also there is an average process age graph and a process count graph.
 
 Setup PHP-FPM
@@ -9,6 +11,7 @@ This plugin requires PHP CLI.
 `$ cd /usr/share/munin/plugins/`  
 `$ [sudo] wget https://github.com/MorbZ/munin-php-fpm/blob/master/php-fpm.php`  
 `$ [sudo] chmod +x php-fpm.php`
+'$ [sudo] mv php-fpm.php php-fpm`
 
 ### Setup Graphs
 Average process memory per pool:  

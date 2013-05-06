@@ -3,11 +3,20 @@
 <?php
 
 /**
+* @author realhidden
 * @author Devlopnet
 * @author MorbZ
 * @licence CC
 */
 
+//grab all pools
+exec('find /etc/php5/fpm/pool.d/*.conf -type f -printf "%f\n"',$allpool);
+foreach($allpool as &$pool)
+{
+   $pool=substr($pool,0,-5);
+}
+
+//grab processes
 exec("ps -eo %cpu,etime,rss,command | grep php-fpm", $result);
 
 //iterate through processes
@@ -42,6 +51,20 @@ foreach ($result as $line) {
 	$groups[$groupName]['cpu'] += $cpu;
 	$groups[$groupName]['time'] += timeToSeconds($time);
 	$groups[$groupName]['memory'] += $ram / 1024;
+}
+
+//add missing pools
+foreach($allpool as $groupName)
+{
+	if (isset($groups[$groupName]))
+		continue;
+
+	$groups[$groupName] = array(
+                'count' => 0,
+                'memory' => 0,
+                'cpu' => 0,
+                'time' => 0
+        );
 }
 
 //check args
