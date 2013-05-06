@@ -11,7 +11,7 @@ This plugin requires PHP CLI.
 `$ cd /usr/share/munin/plugins/`  
 `$ [sudo] wget https://github.com/MorbZ/munin-php-fpm/blob/master/php-fpm.php`  
 `$ [sudo] chmod +x php-fpm.php`
-'$ [sudo] mv php-fpm.php php-fpm`
+`$ [sudo] mv php-fpm.php php-fpm`
 
 ### Setup Graphs
 Average process memory per pool:  
