@@ -118,7 +118,7 @@ switch ($fileCalled) {
 		}
 		$config = array(
 			'params' => array(
-				'graph_title' => 'PHP-FPM Average Process Memory',
+				'graph_title' => 'PHP52-FPM Average Process Memory',
 				'graph_vlabel' => 'MB'
 			),
 			'elements'	=>	$elements
@@ -139,7 +139,7 @@ switch ($fileCalled) {
 		}
 		$config = array(
 			'params' => array(
-				'graph_title' => 'PHP-FPM CPU',
+				'graph_title' => 'PHP52-FPM CPU',
 				'graph_vlabel' => '%',
 				'graph_scale' => 'no'
 			),
@@ -160,7 +160,7 @@ switch ($fileCalled) {
 		}
 		$config = array(
 			'params' => array(
-				'graph_title' => 'PHP-FPM Processes',
+				'graph_title' => 'PHP52-FPM Processes',
 				'graph_vlabel' => 'processes'
 			),
 			'elements'	=>	$elements
@@ -181,7 +181,7 @@ switch ($fileCalled) {
 		}
 		$config = array(
 			'params' => array(
-				'graph_title' => 'PHP-FPM Average Process Age',
+				'graph_title' => 'PHP52-FPM Average Process Age',
 				'graph_vlabel' => 'seconds',
 				'graph_scale' => 'no'
 			),
