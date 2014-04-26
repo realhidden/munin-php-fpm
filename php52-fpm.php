@@ -32,12 +32,6 @@ for ($i=0;$i<count($config);$i++)
      }
 }
 
-exec('find /etc/php5/fpm/pool.d/*.conf -type f -printf "%f\n"',$allpool);
-foreach($allpool as &$pool)
-{
-   $pool=substr($pool,0,-5);
-}
-
 //grab processes
 exec('ps -eo %cpu,etime,rss,uid,command | grep php-cgi | grep "\-\-fpm"', $result);
 
